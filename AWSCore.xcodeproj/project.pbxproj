@@ -37,7 +37,6 @@
 		BD00002C1AB8C47C004496EF /* query-output.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0000191AB8C47C004496EF /* query-output.json */; };
 		BD00002D1AB8C47C004496EF /* rest-xml-input.json in Resources */ = {isa = PBXBuildFile; fileRef = BD00001A1AB8C47C004496EF /* rest-xml-input.json */; };
 		BD00002E1AB8C47C004496EF /* rest-xml-output.json in Resources */ = {isa = PBXBuildFile; fileRef = BD00001B1AB8C47C004496EF /* rest-xml-output.json */; };
-		BD0000461AB8C583004496EF /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0000451AB8C583004496EF /* credentials.json */; };
 		BD0DBBC91AE1BC75003C78C3 /* AWSSerializationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0DBBC81AE1BC75003C78C3 /* AWSSerializationTests.m */; };
 		BD4B22C11ADEF1DB00BE550A /* AWSSignatureTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4B22C01ADEF1DB00BE550A /* AWSSignatureTests.m */; };
 		BD4B22C51ADF457E00BE550A /* AWSCredentialsProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD4B22C41ADF457E00BE550A /* AWSCredentialsProviderTests.m */; };
@@ -953,7 +952,6 @@
 				BD00002B1AB8C47C004496EF /* query-input.json in Resources */,
 				BD00002D1AB8C47C004496EF /* rest-xml-input.json in Resources */,
 				BD00002C1AB8C47C004496EF /* query-output.json in Resources */,
-				BD0000461AB8C583004496EF /* credentials.json in Resources */,
 				CE6397221AC49D4D00459E23 /* rest-json-input.json in Resources */,
 				BD0000281AB8C47C004496EF /* ec2-output.json in Resources */,
 			);
@@ -1133,7 +1131,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.10;
 			};
 			name = Debug;
 		};
@@ -1166,7 +1164,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.10;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1174,6 +1172,7 @@
 		BDF557671AB371490067F4F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -1187,6 +1186,7 @@
 		BDF557681AB371490067F4F1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

@@ -46,4 +46,10 @@
    <FileRef
       location = "group:AWSSQS.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Scripts/SdkPackage.sh">
+   </FileRef>
+   <FileRef
+      location = "group:Scripts/Package.sh">
+   </FileRef>
 </Workspace>

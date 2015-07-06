@@ -15,7 +15,7 @@ function exitOnFailureCode() {
 
 if [ $# -eq 0 ]
   then
-    echo "No argument supplied, need to specified the name of the project. e.g. Sdkpackage.sh S3"
+    echo "No argument supplied, need to specified the name of the project. e.g. SdkPackage.sh AWSS3"
     exit 1
 fi
 
@@ -42,23 +42,23 @@ then
 fi
 
 # Build .a files
-xcodebuild ARCHS="armv7 armv7s arm64 i386 x86_64" \
+xcodebuild ARCHS="x86_64" \
 	ONLY_ACTIVE_ARCH=NO \
 	-configuration Debug \
     -project "${project_name}.xcodeproj" \
     -target "${project_name}" \
-    -sdk iphonesimulator \
+    -sdk macosx \
     SYMROOT=$(PWD)/build \
     clean build
 
 exitOnFailureCode $?
 
-xcodebuild ARCHS="armv7 armv7s arm64 i386 x86_64" \
+xcodebuild ARCHS="x86_64" \
 	ONLY_ACTIVE_ARCH=NO \
 	-configuration Release \
     -project "${project_name}.xcodeproj" \
     -target "${project_name}" \
-    -sdk iphoneos \
+    -sdk macosx \
     SYMROOT=$(PWD)/build \
     clean build
 
@@ -95,10 +95,11 @@ ln -s Versions/Current/$FRAMEWORK_NAME $FRAMEWORK_DIR/$FRAMEWORK_NAME
 # The library file is given the same name as the
 # framework with no .a extension.
 echo "Framework: Creating library..."
-lipo -create \
-    "build/Debug-iphonesimulator/lib${project_name}.a" \
-    "build/Release-iphoneos/lib${project_name}.a" \
-    -o "$FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME"
+#lipo -create \
+#    "build/Debug-iphonesimulator/lib${project_name}.a" \
+#    "build/Release-iphoneos/lib${project_name}.a" \
+#    -o "$FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME"
+cp "build/Release/lib${FRAMEWORK_NAME}.a" "$FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME"
 
 exitOnFailureCode $?
 
@@ -106,7 +107,7 @@ exitOnFailureCode $?
 # header files and service definition json files
 echo "Framework: Copying public headers into current version..."
 #those headers are declared in xcode's building phase: Headers
-cp -a build/Release-iphoneos/include/${project_name}/*.h $FRAMEWORK_DIR/Headers/
+cp -a build/Release/include/${project_name}/*.h $FRAMEWORK_DIR/Headers/
 exitOnFailureCode $?
 
 # copy service definition json files

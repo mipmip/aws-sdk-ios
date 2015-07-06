@@ -13,7 +13,7 @@
  permissions and limitations under the License.
  */
 
-#import <UIKit/UIKit.h>
+#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import "AWSTestUtility.h"
 #import "AWSSTS.h"

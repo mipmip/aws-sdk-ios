@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BD00003A1AB8C526004496EF /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0000391AB8C526004496EF /* credentials.json */; };
 		BD0000581AB8E18E004496EF /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0000571AB8E18E004496EF /* AWSTestUtility.m */; };
 		BD00FF411AB8B6D2004496EF /* libAWSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00FF401AB8B6D2004496EF /* libAWSCore.a */; };
 		BD00FFEA1AB8C42D004496EF /* AWSGeneralS3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00FFE61AB8C42D004496EF /* AWSGeneralS3Tests.m */; };
@@ -286,7 +285,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD00003A1AB8C526004496EF /* credentials.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +362,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.10;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
 			};
 			name = Debug;
@@ -398,7 +396,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = macosx10.10;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -413,6 +411,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AWSS3;
+				SDKROOT = macosx10.10;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -426,6 +425,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AWSS3;
+				SDKROOT = macosx10.10;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
