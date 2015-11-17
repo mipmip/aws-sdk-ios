@@ -362,8 +362,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx10.10;
+				SDKROOT = appletvos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
+				VALID_ARCHS = "arm64 x86_64";
 			};
 			name = Debug;
 		};
@@ -396,9 +397,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx10.10;
+				SDKROOT = appletvos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 x86_64";
 			};
 			name = Release;
 		};
@@ -411,7 +413,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AWSS3;
-				SDKROOT = macosx10.10;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -425,7 +427,7 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AWSS3;
-				SDKROOT = macosx10.10;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;

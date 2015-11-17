@@ -47,18 +47,18 @@ xcodebuild ARCHS="x86_64" \
 	-configuration Debug \
     -project "${project_name}.xcodeproj" \
     -target "${project_name}" \
-    -sdk macosx \
+    -sdk appletvsimulator \
     SYMROOT=$(PWD)/build \
     clean build
 
 exitOnFailureCode $?
 
-xcodebuild ARCHS="x86_64" \
+xcodebuild ARCHS="arm64" \
 	ONLY_ACTIVE_ARCH=NO \
 	-configuration Release \
     -project "${project_name}.xcodeproj" \
     -target "${project_name}" \
-    -sdk macosx \
+    -sdk appletvos \
     SYMROOT=$(PWD)/build \
     clean build
 
@@ -95,11 +95,10 @@ ln -s Versions/Current/$FRAMEWORK_NAME $FRAMEWORK_DIR/$FRAMEWORK_NAME
 # The library file is given the same name as the
 # framework with no .a extension.
 echo "Framework: Creating library..."
-#lipo -create \
-#    "build/Debug-iphonesimulator/lib${project_name}.a" \
-#    "build/Release-iphoneos/lib${project_name}.a" \
-#    -o "$FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME"
-cp "build/Release/lib${FRAMEWORK_NAME}.a" "$FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME"
+lipo -create \
+    "build/Debug-appletvsimulator/lib${project_name}.a" \
+    "build/Release-appletvos/lib${project_name}.a" \
+    -o "$FRAMEWORK_DIR/Versions/Current/$FRAMEWORK_NAME"
 
 exitOnFailureCode $?
 
@@ -107,7 +106,7 @@ exitOnFailureCode $?
 # header files and service definition json files
 echo "Framework: Copying public headers into current version..."
 #those headers are declared in xcode's building phase: Headers
-cp -a build/Release/include/${project_name}/*.h $FRAMEWORK_DIR/Headers/
+cp -a build/Release-appletvos/include/${project_name}/*.h $FRAMEWORK_DIR/Headers/
 exitOnFailureCode $?
 
 # copy service definition json files

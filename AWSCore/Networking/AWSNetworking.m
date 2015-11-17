@@ -14,7 +14,6 @@
  */
 
 #import "AWSNetworking.h"
-#import <Cocoa/Cocoa.h>
 #import "AWSBolts.h"
 #import "AWSCategory.h"
 #import "AWSModel.h"

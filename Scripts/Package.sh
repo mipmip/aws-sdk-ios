@@ -40,4 +40,4 @@ if [ -x "Scripts/SdkPackage.sh" ]; then
 
 fi
 
-git checkout .
+#git checkout .

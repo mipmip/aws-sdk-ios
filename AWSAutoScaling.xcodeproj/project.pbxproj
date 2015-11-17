@@ -336,7 +336,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
 			};
 			name = Debug;
@@ -370,7 +370,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				SDKROOT = appletvos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -385,7 +385,9 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AWSAutoScaling;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 x86_64";
 			};
 			name = Debug;
 		};
@@ -398,7 +400,9 @@
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = AWSAutoScaling;
+				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = "arm64 x86_64";
 			};
 			name = Release;
 		};
@@ -418,6 +422,7 @@
 				INFOPLIST_FILE = AWSAutoScalingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = AWSAutoScalingTests;
+				SDKROOT = appletvos;
 			};
 			name = Debug;
 		};
@@ -433,6 +438,7 @@
 				INFOPLIST_FILE = AWSAutoScalingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = AWSAutoScalingTests;
+				SDKROOT = appletvos;
 			};
 			name = Release;
 		};

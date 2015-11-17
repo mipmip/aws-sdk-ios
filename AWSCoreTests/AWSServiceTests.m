@@ -13,7 +13,6 @@
  permissions and limitations under the License.
  */
 
-#import <Cocoa/Cocoa.h>
 #import <XCTest/XCTest.h>
 #import "AWSCore.h"
 #import "AWSTestUtility.h"
