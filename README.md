@@ -1,3 +1,9 @@
+# This is a fork to ensure OSX support
+
+An OSX sample app demonstrating S3 is here:
+https://github.com/mipmip/sample-aws-sdk-for-osx-s3
+
+
 #Version 2 of the AWS SDK for iOS
 
 [![Version](http://cocoapod-badges.herokuapp.com/v/AWSiOSSDKv2/badge.png)](http://cocoadocs.org/docsets/AWSiOSSDKv2)
