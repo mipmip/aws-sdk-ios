@@ -18,7 +18,7 @@
 @interface AWSSynchronizedMutableDictionary()
 
 @property (nonatomic, strong) NSMutableDictionary *dictionary;
-@property (nonatomic, strong) dispatch_queue_t dispatchQueue;
+@property (nonatomic, assign) dispatch_queue_t dispatchQueue;
 
 @end
 

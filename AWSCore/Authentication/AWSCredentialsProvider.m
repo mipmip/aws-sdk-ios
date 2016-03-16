@@ -240,7 +240,7 @@ NSString *const AWSCredentialsProviderKeychainIdentityId = @"identityId";
 @property (nonatomic, strong) AWSUICKeyChainStore *keychain;
 @property (nonatomic, strong) AWSExecutor *refreshExecutor;
 @property (atomic, assign) int32_t count;
-@property (nonatomic, strong) dispatch_semaphore_t semaphore;
+@property (nonatomic, assign) dispatch_semaphore_t semaphore;
 @property (nonatomic, strong) NSString *identityId;
 @property (nonatomic, strong) NSString *accessKey;
 @property (nonatomic, strong) NSString *secretKey;
